@@ -23,6 +23,7 @@ public class Course {
     private String name;
 
     @Column(length = 10, nullable = false)
+    @JsonProperty("category")
     private String categoria;
     
 }
