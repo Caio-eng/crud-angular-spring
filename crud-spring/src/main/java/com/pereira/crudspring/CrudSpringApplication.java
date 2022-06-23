@@ -1,5 +1,7 @@
 package com.pereira.crudspring;
 
+import java.util.Arrays;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,7 +26,11 @@ public class CrudSpringApplication {
 			c.setName("Angular com Spring");
 			c.setCategoria("front-end");
 
-			courseRepository.save(c);
+			Course c2 = new Course();
+			c2.setName("SpringBoot");
+			c2.setCategoria("back-end");
+
+			courseRepository.saveAll(Arrays.asList(c, c2));
 		};
 	}
 
