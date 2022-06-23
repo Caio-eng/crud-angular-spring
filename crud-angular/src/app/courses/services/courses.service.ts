@@ -27,4 +27,9 @@ export class CoursesService {
       first()
     );
   }
+
+  delete(id: string) {
+    console.log(this.API + '/' + id);
+    return this.httpClient.delete(this.API + '/' + id);
+  }
 }
